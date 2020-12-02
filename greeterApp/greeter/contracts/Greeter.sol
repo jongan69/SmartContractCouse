@@ -4,11 +4,11 @@ contract Greeter {
     
     string greeting;
 
-    function greeter(string _greeting) public {
+    function greeter(string memory _greeting) public {
         greeting = _greeting;
     }
 
-    function greet() constant returns (string) {
+    function greet() public view returns (string memory) {
         return greeting;
     }
 }
